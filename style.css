@@ -1,0 +1,190 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+body{
+    background:url("sahara desert.jpg");
+    background-size: cover;
+}
+#nav_left{
+    display: inline-block;
+    margin: 1rem 0rem 0rem 3rem;
+}
+#nav_left img{
+    width: 69px; 
+    height:69px;
+    padding: 1rem;
+}
+#nav_right{
+    display: inline;
+    float: right;
+}
+#nav_right ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+#nav_right li{
+    text-align: center;
+    display: inline;
+    margin: 1rem;
+}
+#nav_right a{
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.5rem;
+    color: white;
+    transition:font-size 1s;
+}
+#container{
+    display: grid;
+    grid-template-columns: repeat(2,auto);
+}
+#part_A{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#part_A span{
+    font-size: 60px;
+    color: white;
+    font-weight: bold;
+}
+#part_A p{
+    color: white;
+    font-size: 15px;
+    margin: 1rem 0px;
+    transition:font-size 1s;
+}
+#c{
+    background-color: white;
+    font-size: 11px;
+    font-weight: bold;
+    border: 1px solid white;
+    padding: 1rem 4rem;
+    border-radius: 30px;
+    margin-top: 1rem;
+    cursor: pointer;
+    transition:font-size 1s;
+}
+#part_B{
+    display: grid;
+    grid-template-columns: repeat(2,auto);
+}
+
+.box{
+    margin: 1rem;
+    width: 17rem;
+    height: 17rem;
+    position: relative;
+    transition: width 1s,height 1s, bottom 1s,position 1s;
+}
+.box::before{
+    content:' ';
+    position: absolute;
+    top:0px;
+    right:0px;
+    left:0px;
+    bottom:0px;
+    background-repeat:no-repeat;
+    border-radius: 20px;
+    background-position: center;
+    opacity: 90%;
+}
+#box1::before{
+    background: url("pic-1.png");
+    background-size:cover;
+}
+#box2::before{
+    background: url("pic-2.png");  
+    background-size:cover;
+}
+#box3::before{
+    background: url("pic-3.png");
+    background-size:cover;
+}
+#box4::before{
+    background: url("pic-4.png");
+    background-size:cover;
+}
+.box_text{
+    position: relative;
+    color: white;
+    margin: 0.5rem;
+}
+.box_text span{
+    display: inline-block;
+    font-size: 13px;
+    line-height: 1.5rem;
+    margin-top: 1rem;
+}
+.box:hover{
+    width: 18rem;
+    height: 18rem;
+    transform: translateY(-10px);
+}
+
+@media only screen and (max-width:1290px) and (min-width:851px){
+
+    #container{
+        display: grid;
+        grid-template-columns: repeat(1,auto);
+    }
+    #part_B{
+        display: grid;
+        grid-template-columns: repeat(1,auto);
+        justify-content: center;
+    }
+    .box{
+        margin: 1rem;
+        width: 37rem;
+        height: 20rem;
+    }
+    #box4::before{
+        background-size: cover;
+        background-position: bottom;
+        background-repeat: no-repeat;
+    }
+}
+@media only screen and (max-width:850px) and (min-width:600px){
+    #container{
+        display: grid;
+        grid-template-columns: repeat(1,auto);
+    }
+    #part_B{
+        display: grid;
+        grid-template-columns: repeat(1,auto);
+        justify-content: center;
+    }
+    .box{
+        margin: 1rem;
+        width: 17rem;
+        height: 17rem;
+    }
+    #nav_right ul{
+        display: block;
+    }
+    .box::before{
+        background-repeat:no-repeat;
+    }
+
+}
+@media only screen and (max-width:599px) and (min-width:100px){
+    #container{
+        display: grid;
+        grid-template-columns: repeat(1,auto);
+    }
+
+    #nav_right{
+        float: none;
+    }
+    #part_B{
+        display: grid;
+        grid-template-columns: repeat(1,auto);
+        justify-content: center;
+    }
+    .box::before{
+        background-repeat:no-repeat;
+    }
+}
